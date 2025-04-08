@@ -203,7 +203,6 @@ func (h *Hub) reader(conn *websocket.Conn) {
 	} // Fin del for loop
 }
 
-// Manejador HTTP para las conexiones WebSocket
 func serveWs(hub *Hub, w http.ResponseWriter, r *http.Request) {
 	// Actualizar la conexión HTTP a WebSocket
 	conn, err := upgrader.Upgrade(w, r, nil)
